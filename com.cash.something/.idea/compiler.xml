@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="akka" />
+        <module name="com.cash.something.springBoot.app" />
+        <module name="com.cash.springBoot.app" />
+        <module name="com.cash.springBoot.eureka-server" />
+        <module name="com.cash.springBoot.hystrix.dashboard" />
+        <module name="elasticsearch" />
+        <module name="netty" />
+        <module name="resizable-array" />
+        <module name="sharding-jdbc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="akka" target="1.8" />
+      <module name="com.cash.springBoot.app" target="1.8" />
+      <module name="com.cash.springBoot.eureka-server" target="1.8" />
+      <module name="com.cash.springBoot.hystrix.dashboard" target="1.8" />
+      <module name="elasticsearch" target="1.5" />
+      <module name="netty" target="1.8" />
+      <module name="resizable-array" target="1.8" />
+      <module name="sharding-jdbc" target="1.5" />
+      <module name="springBoot" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

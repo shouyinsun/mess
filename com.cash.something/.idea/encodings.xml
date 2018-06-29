@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/sharding-jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBoot" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.app" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.eureka-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.hystrix.dashboard" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

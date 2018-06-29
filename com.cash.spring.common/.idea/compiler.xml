@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="cash.aop.plugin" />
+        <module name="cash.spring.comm" />
+        <module name="cash.springMvc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="cash.aop.plugin" target="1.8" />
+      <module name="cash.spring.comm" target="1.8" />
+      <module name="cash.spring.common" target="1.8" />
+      <module name="cash.springMvc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

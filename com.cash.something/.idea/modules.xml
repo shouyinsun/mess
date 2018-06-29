@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/akka/akka.iml" filepath="$PROJECT_DIR$/akka/akka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/com.cash.something.iml" filepath="$PROJECT_DIR$/.idea/com.cash.something.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.app/com.cash.springBoot.app.iml" filepath="$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.app/com.cash.springBoot.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.eureka-server/com.cash.springBoot.eureka-server.iml" filepath="$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.eureka-server/com.cash.springBoot.eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.hystrix.dashboard/com.cash.springBoot.hystrix.dashboard.iml" filepath="$PROJECT_DIR$/springBoot/sth/com.cash.springBoot.hystrix.dashboard/com.cash.springBoot.hystrix.dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/elasticsearch/elasticsearch.iml" filepath="$PROJECT_DIR$/elasticsearch/elasticsearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netty/netty.iml" filepath="$PROJECT_DIR$/netty/netty.iml" />
+      <module fileurl="file://$PROJECT_DIR$/resizable-array/resizable-array.iml" filepath="$PROJECT_DIR$/resizable-array/resizable-array.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sharding-jdbc/sharding-jdbc.iml" filepath="$PROJECT_DIR$/sharding-jdbc/sharding-jdbc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springBoot/springBoot.iml" filepath="$PROJECT_DIR$/springBoot/springBoot.iml" />
+    </modules>
+  </component>
+</project>
