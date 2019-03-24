@@ -1,4 +1,4 @@
-package com.cash.something.netty.Im.serializer;
+package com.cash.something.netty.im.serializer;
 
 /**
  * author cash

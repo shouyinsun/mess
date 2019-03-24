@@ -1,4 +1,4 @@
-package com.cash.something.netty.Im;
+package com.cash.something.netty.im;
 
 /**
  * 通信协议的设计

@@ -1,8 +1,8 @@
-package com.cash.something.netty.Im.serializer.impl;
+package com.cash.something.netty.im.serializer.impl;
 
 import com.alibaba.fastjson.JSON;
-import com.cash.something.netty.Im.serializer.Serializer;
-import com.cash.something.netty.Im.serializer.SerializerAlgorithm;
+import com.cash.something.netty.im.serializer.Serializer;
+import com.cash.something.netty.im.serializer.SerializerAlgorithm;
 
 /**
  * author cash json 序列化

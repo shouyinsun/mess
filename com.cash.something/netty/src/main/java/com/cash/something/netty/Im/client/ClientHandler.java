@@ -1,9 +1,11 @@
-package com.cash.something.netty.Im.client;
+package com.cash.something.netty.im.client;
 
-import com.cash.something.netty.Im.protocal.Packet;
-import com.cash.something.netty.Im.protocal.PacketCodeC;
-import com.cash.something.netty.Im.protocal.request.LoginRequestPacket;
-import com.cash.something.netty.Im.protocal.response.LoginResponsePacket;
+import com.cash.something.netty.im.protocal.Packet;
+import com.cash.something.netty.im.protocal.PacketCodeC;
+import com.cash.something.netty.im.protocal.request.LoginRequestPacket;
+import com.cash.something.netty.im.protocal.response.LoginResponsePacket;
+import com.cash.something.netty.im.protocal.response.MessageResponsePacket;
+import com.cash.something.netty.im.utils.LoginUtil;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -36,10 +38,15 @@ public class ClientHandler extends ChannelHandlerAdapter {
         if(packet instanceof LoginResponsePacket){
             LoginResponsePacket loginResponsePacket= (LoginResponsePacket) packet;
             if (loginResponsePacket.isSuccess()) {
+                //登录attr
+                LoginUtil.markAsLogin(ctx.channel());
                 System.out.println(new Date() + ": 客户端登录成功");
             } else {
                 System.out.println(new Date() + ": 客户端登录失败，原因：" + loginResponsePacket.getReason());
             }
+        }else if(packet instanceof MessageResponsePacket){
+            MessageResponsePacket messageResponsePacket= (MessageResponsePacket) packet;
+            System.out.println(new Date() + ": 收到服务端的消息: " + messageResponsePacket.getMessage());
         }
 
     }

@@ -1,5 +1,11 @@
-package com.cash.something.netty.Im.server;
+package com.cash.something.netty.im.server;
 
+import com.cash.something.netty.im.handler.AuthHandler;
+import com.cash.something.netty.im.handler.PacketDecoder;
+import com.cash.something.netty.im.handler.PacketEncoder;
+import com.cash.something.netty.im.handler.Spliter;
+import com.cash.something.netty.im.handler.request.LoginRequestHandler;
+import com.cash.something.netty.im.handler.request.MessageRequestHandler;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelOption;
@@ -31,7 +37,20 @@ public class NettyServer {
                 .childHandler(new ChannelInitializer<NioSocketChannel>() {
                     @Override
                     protected void initChannel(NioSocketChannel ch) throws Exception {
-                        ch.pipeline().addLast(new ServerHandler());
+                        //ChannelPipeline 是一个双向链表结构
+
+                        // 用handler细分逻辑
+                        // ch.pipeline().addLast(new ServerHandler());
+
+
+                        //拆包器
+                        ch.pipeline().addLast(new Spliter());//基于长度域拆包器 LengthFieldBasedFrameDecoder
+                        ch.pipeline().addLast(new PacketDecoder());
+                        //权限认证,通过之后后面会自己移除
+                        ch.pipeline().addLast(new LoginRequestHandler());
+                        ch.pipeline().addLast(new AuthHandler());
+                        ch.pipeline().addLast(new MessageRequestHandler());
+                        ch.pipeline().addLast(new PacketEncoder());
                     }
                 });
 

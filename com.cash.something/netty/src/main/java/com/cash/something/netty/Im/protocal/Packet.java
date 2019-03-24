@@ -1,4 +1,4 @@
-package com.cash.something.netty.Im.protocal;
+package com.cash.something.netty.im.protocal;
 
 import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;

@@ -41,6 +41,7 @@ public class NettyClient {
 
     //connect failure,retry
     private static void connect(Bootstrap bootstrap, String host, int port, int retry) {
+        //connect会启动event loop
         bootstrap.connect(host, port).addListener(future -> {
             if (future.isSuccess()) {
                 System.out.println("连接成功!");

@@ -1,7 +1,7 @@
-package com.cash.something.netty.Im.protocal.request;
+package com.cash.something.netty.im.protocal.request;
 
-import com.cash.something.netty.Im.protocal.Packet;
-import com.cash.something.netty.Im.protocal.command.Command;
+import com.cash.something.netty.im.protocal.Packet;
+import com.cash.something.netty.im.protocal.command.Command;
 import lombok.Getter;
 import lombok.Setter;
 

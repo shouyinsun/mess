@@ -1,10 +1,10 @@
-package com.cash.something.netty.Im;
+package com.cash.something.netty.im;
 
-import com.cash.something.netty.Im.protocal.Packet;
-import com.cash.something.netty.Im.protocal.PacketCodeC;
-import com.cash.something.netty.Im.protocal.request.LoginRequestPacket;
-import com.cash.something.netty.Im.serializer.Serializer;
-import com.cash.something.netty.Im.serializer.impl.JSONSerializer;
+import com.cash.something.netty.im.protocal.Packet;
+import com.cash.something.netty.im.protocal.PacketCodeC;
+import com.cash.something.netty.im.protocal.request.LoginRequestPacket;
+import com.cash.something.netty.im.serializer.Serializer;
+import com.cash.something.netty.im.serializer.impl.JSONSerializer;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.UnpooledByteBufAllocator;
 import org.junit.Assert;

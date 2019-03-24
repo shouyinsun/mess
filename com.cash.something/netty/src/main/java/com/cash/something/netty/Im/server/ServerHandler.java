@@ -1,9 +1,11 @@
-package com.cash.something.netty.Im.server;
+package com.cash.something.netty.im.server;
 
-import com.cash.something.netty.Im.protocal.Packet;
-import com.cash.something.netty.Im.protocal.PacketCodeC;
-import com.cash.something.netty.Im.protocal.request.LoginRequestPacket;
-import com.cash.something.netty.Im.protocal.response.LoginResponsePacket;
+import com.cash.something.netty.im.protocal.Packet;
+import com.cash.something.netty.im.protocal.PacketCodeC;
+import com.cash.something.netty.im.protocal.request.LoginRequestPacket;
+import com.cash.something.netty.im.protocal.request.MessageRequestPacket;
+import com.cash.something.netty.im.protocal.response.LoginResponsePacket;
+import com.cash.something.netty.im.protocal.response.MessageResponsePacket;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerAdapter;
 import io.netty.channel.ChannelHandlerContext;
@@ -39,6 +41,15 @@ public class ServerHandler extends ChannelHandlerAdapter {
             //相应
             ByteBuf respByteBuf=PacketCodeC.INSTANCE.encode(ctx.alloc(),loginResponsePacket);
             ctx.channel().writeAndFlush(respByteBuf);
+
+        }else if(packet instanceof MessageRequestPacket){
+            MessageRequestPacket messageRequestPacket= (MessageRequestPacket) packet;
+            System.out.println(new Date() + ": 收到客户端消息: " + messageRequestPacket.getMessage());
+
+            MessageResponsePacket messageResponsePacket=new MessageResponsePacket();
+            messageResponsePacket.setMessage("服务端回复【" + messageRequestPacket.getMessage() + "】");
+            ByteBuf responseByteBuf=PacketCodeC.INSTANCE.encode(ctx.alloc(),messageResponsePacket);
+            ctx.channel().writeAndFlush(responseByteBuf);
 
 
         }

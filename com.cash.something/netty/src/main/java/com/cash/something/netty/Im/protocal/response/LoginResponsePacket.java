@@ -1,7 +1,7 @@
-package com.cash.something.netty.Im.protocal.response;
+package com.cash.something.netty.im.protocal.response;
 
-import com.cash.something.netty.Im.protocal.Packet;
-import com.cash.something.netty.Im.protocal.command.Command;
+import com.cash.something.netty.im.protocal.Packet;
+import com.cash.something.netty.im.protocal.command.Command;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +16,8 @@ public class LoginResponsePacket extends Packet {
     private boolean success;
 
     private String reason;
+
+    private String userId;
 
     @Override
     public Byte getCommand() {

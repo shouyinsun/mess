@@ -1,6 +1,6 @@
-package com.cash.something.netty.Im.serializer;
+package com.cash.something.netty.im.serializer;
 
-import com.cash.something.netty.Im.serializer.impl.JSONSerializer;
+import com.cash.something.netty.im.serializer.impl.JSONSerializer;
 
 /**
  * 序列化接口
