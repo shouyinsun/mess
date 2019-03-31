@@ -46,12 +46,12 @@ public class NettyClient {
             if (future.isSuccess()) {
                 System.out.println("连接成功!");
             } else if (retry == 0) {
-                System.err.println("重试次数已用完，放弃连接！");
+                System.err.println("重试次数已用完,放弃连接！");
             } else {
                 int order = (MAX_RETRY - retry) + 1;
                 //retry 指数退避方式
                 int delay = 1 << order;
-                System.err.println(new Date() + ": 连接失败，第" + order + "次重连……");
+                System.err.println(new Date() + ": 连接失败,第" + order + "次重连……");
                 bootstrap.group().schedule(() -> connect(bootstrap, host, port, retry - 1), delay, TimeUnit.SECONDS);
             }
         });

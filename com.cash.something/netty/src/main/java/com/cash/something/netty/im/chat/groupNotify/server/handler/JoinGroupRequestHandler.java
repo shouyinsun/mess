@@ -11,7 +11,7 @@ import io.netty.channel.group.ChannelGroup;
 public class JoinGroupRequestHandler extends SimpleChannelInboundHandler<JoinGroupRequestPacket> {
     @Override
     protected void messageReceived(ChannelHandlerContext ctx, JoinGroupRequestPacket requestPacket) {
-        //获取群对应的 channelGroup，然后将当前用户的 channel 添加进去
+        //获取群对应的 channelGroup,然后将当前用户的 channel 添加进去
         String groupId = requestPacket.getGroupId();
         ChannelGroup channelGroup = SessionUtil.getChannelGroup(groupId);
         channelGroup.add(ctx.channel());

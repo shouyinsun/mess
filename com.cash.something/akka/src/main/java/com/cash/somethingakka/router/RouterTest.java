@@ -46,11 +46,11 @@ public class RouterTest extends UntypedActor{
         if(o instanceof InboxTest.Msg){
             router.route(o, getSender());//进行路由转发
         }else if(o instanceof Terminated){
-            router = router.removeRoutee(((Terminated)o).actor());//发生中断，将该actor删除。当然也可以设置actor重启策略,进行优化
+            router = router.removeRoutee(((Terminated)o).actor());//发生中断,将该actor删除。当然也可以设置actor重启策略,进行优化
             System.out.println(((Terminated)o).actor().path() + " 该actor已经删除。router.size=" + router.routees().size());
 
             if(router.routees().size() == 0){//没有可用actor了
-                System.out.print("没有可用actor了，系统关闭。");
+                System.out.print("没有可用actor了,系统关闭。");
                 flag.compareAndSet(true, false);
                 getContext().system().shutdown();
             }

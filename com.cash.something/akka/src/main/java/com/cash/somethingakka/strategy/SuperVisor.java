@@ -27,10 +27,10 @@ public class SuperVisor extends UntypedActor {
      */
     @Override
     public SupervisorStrategy supervisorStrategy(){
-        return new OneForOneStrategy(3, Duration.create(1, TimeUnit.MINUTES),//一分钟内重试3次，超过则kill掉actor
+        return new OneForOneStrategy(3, Duration.create(1, TimeUnit.MINUTES),//一分钟内重试3次,超过则kill掉actor
                 new Function<Throwable, SupervisorStrategy.Directive>() {
                     public SupervisorStrategy.Directive apply(Throwable throwable) throws Exception {
-                        if(throwable instanceof ArithmeticException){//ArithmeticException是出现异常的运算条件时，抛出此异常。例如，一个整数“除以零”时，抛出此类的一个实例。
+                        if(throwable instanceof ArithmeticException){//ArithmeticException是出现异常的运算条件时,抛出此异常。例如,一个整数“除以零”时,抛出此类的一个实例。
                             System.out.println("meet ArithmeticException ,just resume.");
                             return  SupervisorStrategy.resume();//继续; 重新开始; 恢复职位;
                         }else if(throwable instanceof NullPointerException){

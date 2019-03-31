@@ -11,7 +11,7 @@ import io.netty.channel.group.ChannelGroup;
 public class QuitGroupRequestHandler extends SimpleChannelInboundHandler<QuitGroupRequestPacket> {
     @Override
     protected void messageReceived(ChannelHandlerContext ctx, QuitGroupRequestPacket requestPacket) {
-        //获取群对应的 channelGroup，然后将当前用户的 channel 移除
+        //获取群对应的 channelGroup,然后将当前用户的 channel 移除
         String groupId = requestPacket.getGroupId();
         ChannelGroup channelGroup = SessionUtil.getChannelGroup(groupId);
         channelGroup.remove(ctx.channel());

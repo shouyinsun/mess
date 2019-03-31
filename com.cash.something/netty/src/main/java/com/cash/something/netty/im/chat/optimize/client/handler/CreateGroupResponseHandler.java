@@ -8,7 +8,7 @@ public class CreateGroupResponseHandler extends SimpleChannelInboundHandler<Crea
 
     @Override
     protected void messageReceived (ChannelHandlerContext ctx, CreateGroupResponsePacket createGroupResponsePacket) {
-        System.out.print("群创建成功，id 为[" + createGroupResponsePacket.getGroupId() + "], ");
+        System.out.print("群创建成功,id 为[" + createGroupResponsePacket.getGroupId() + "], ");
         System.out.println("群里面有：" + createGroupResponsePacket.getUserNameList());
     }
 

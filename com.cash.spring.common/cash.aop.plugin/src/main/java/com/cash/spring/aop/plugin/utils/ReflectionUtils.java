@@ -70,7 +70,7 @@ public class ReflectionUtils {
     }
 
     /**
-     * 取得对象属性值，通过getter方法
+     * 取得对象属性值,通过getter方法
      * boolean类型,is方法
      *
      * 可以取得父类的属性
@@ -93,7 +93,7 @@ public class ReflectionUtils {
     }
 
     /**
-     * 设置对象的属性的值，通过setter方法
+     * 设置对象的属性的值,通过setter方法
      * 可以设置父类的属性值
      *
      * @param obj      对象

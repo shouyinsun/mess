@@ -43,7 +43,7 @@ public class RestartActor extends UntypedActor {
             getContext().stop(getSelf());
         }else if(o == Msg.RESTART){
             System.out.println(((Object) null).toString());
-            //抛出异常，默认会被restart，但这里会resume
+            //抛出异常,默认会被restart,但这里会resume
             double a = 1/0;
         }else{
             unhandled(o);

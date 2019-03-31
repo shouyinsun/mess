@@ -37,7 +37,7 @@ public class AgentTest extends UntypedActor{
                 e.printStackTrace();
             }
             getSender().tell(sum,getSelf());
-            getContext().stop(getSelf());//完成任务，关闭自己
+            getContext().stop(getSelf());//完成任务,关闭自己
         }else{
             unhandled(o);
         }

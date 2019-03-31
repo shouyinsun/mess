@@ -28,12 +28,12 @@ public class CashSthTest {
         Future<String> task3 = task.doTaskThree();
         while(true) {
             if(task1.isDone() && task2.isDone() && task3.isDone()) {
-                // 三个任务都调用完成，退出循环等待
+                // 三个任务都调用完成,退出循环等待
                 break;
             }
             Thread.sleep(1000);
         }
         long end = System.currentTimeMillis();
-        System.out.println("任务全部完成，总耗时：" + (end - start) + "毫秒");
+        System.out.println("任务全部完成,总耗时：" + (end - start) + "毫秒");
     }
 }

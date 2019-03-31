@@ -91,7 +91,7 @@ public class RedisUtil<K,V> {
     }
 
     /**
-     * 0表示第一个成员，-1表示最后一个成员。WITHSCORES选项表示返回的结果中包含每个成员及其分数，否则只返回成员。
+     * 0表示第一个成员,-1表示最后一个成员。WITHSCORES选项表示返回的结果中包含每个成员及其分数,否则只返回成员。
      *
      * @param key
      * @param start
@@ -103,7 +103,7 @@ public class RedisUtil<K,V> {
     }
 
     /**
-     * 返回与Key关联的Sorted-Set中，分数满足表达式1 <= score <= 2的成员的数量
+     * 返回与Key关联的Sorted-Set中,分数满足表达式1 <= score <= 2的成员的数量
      *
      * @param key
      * @param start

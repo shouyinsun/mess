@@ -29,7 +29,7 @@ public class ConsoleCommandManager implements ConsoleCommand {
         if(null!=consoleCommand){
             consoleCommand.exec(scanner,channel);
         }else{
-            System.err.println("无法识别[" + command + "]指令，请重新输入!");
+            System.err.println("无法识别[" + command + "]指令,请重新输入!");
         }
 
     }

@@ -27,10 +27,10 @@
 	<aop:config>
 		<aop:pointcut id="plugin" expression="@within(com.cash.spring.aop.plugin.plugin.annotation.Plugable) || @annotation(com.cash.spring.aop.plugin.plugin.annotation.Plugable)"/>
 
-		<!--配置插件AOP切点，为了防止插件拦截器拦截所有方法，
+		<!--配置插件AOP切点,为了防止插件拦截器拦截所有方法,
             指明了只有特定annotation的方法或者类才会被插件拦截拦截-->
-		<!--配置拦截器，为了保证事务与原来事务一致，需要将此aop执行的顺序配置在事务管理器之后，
-            具体做法是，此拦截器的order 要大于事务AOP的order-->
+		<!--配置拦截器,为了保证事务与原来事务一致,需要将此aop执行的顺序配置在事务管理器之后,
+            具体做法是,此拦截器的order 要大于事务AOP的order-->
 		<aop:aspect ref="pluginProxy" order="1">
 			<aop:around pointcut-ref="plugin" method="execute"/>
 		</aop:aspect>

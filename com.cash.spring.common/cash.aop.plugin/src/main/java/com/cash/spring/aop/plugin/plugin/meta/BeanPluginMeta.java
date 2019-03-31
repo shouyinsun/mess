@@ -18,7 +18,7 @@ public class BeanPluginMeta extends PluginMeta {
     private boolean isSpringBean = true;
     //另外一个实现的ioc容器的 beanId
     private String beanName;
-    //另一个对象类型，如果不是spring的bean将反射创建此类型对应的bean,然后调用方法
+    //另一个对象类型,如果不是spring的bean将反射创建此类型对应的bean,然后调用方法
     private String beanClass;
     //插件对象
     private Object pluginObject;

@@ -38,7 +38,7 @@ public class AgentTest  extends UntypedActor{
                 });
                 queue.add(future);
             }
-            getContext().stop(getSelf());//完成任务，关闭自己
+            getContext().stop(getSelf());//完成任务,关闭自己
         }else{
             unhandled(o);
         }

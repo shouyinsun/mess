@@ -7,7 +7,7 @@ import akka.japi.Procedure;
 import com.typesafe.config.ConfigFactory;
 
 /**
- * actor运行过程中，可能会有多种状态，各个状态间可能会存在切换的情况
+ * actor运行过程中,可能会有多种状态,各个状态间可能会存在切换的情况
  * author cash
  * create 2017-08-31-16:55
  **/

@@ -11,7 +11,7 @@ import java.util.concurrent.TimeoutException;
 
 /**
  * 可以通过一个actor来给另一个actor发消息
- * 其实还可以使用inbox消息收件箱来给某个actor发消息，并且可以进行 交互
+ * 其实还可以使用inbox消息收件箱来给某个actor发消息,并且可以进行 交互
  * author cash
  * create 2017-08-31-15:25
  **/

@@ -26,7 +26,7 @@ public class GroupMessageRequestHandler extends SimpleChannelInboundHandler<Grou
         responsePacket.setFromUser(SessionUtil.getSession(ctx.channel()));
 
 
-        // 2. 拿到群聊对应的 channelGroup，写到每个客户端
+        // 2. 拿到群聊对应的 channelGroup,写到每个客户端
         ChannelGroup channelGroup = SessionUtil.getChannelGroup(groupId);
         channelGroup.writeAndFlush(responsePacket);
     }

@@ -65,17 +65,17 @@ public class StateMachineConfig extends EnumStateMachineConfigurerAdapter<States
             @Override
             public void transition(Transition<States, Events> transition) {
                 if(transition.getTarget().getId() == States.UNPAID) {
-                    logger.info("订单创建，待支付");
+                    logger.info("订单创建,待支付");
                     return;
                 }
                 if(transition.getSource().getId() == States.UNPAID
                         && transition.getTarget().getId() == States.WAITING_FOR_RECEIVE) {
-                    logger.info("用户完成支付，待收货");
+                    logger.info("用户完成支付,待收货");
                     return;
                 }
                 if(transition.getSource().getId() == States.WAITING_FOR_RECEIVE
                         && transition.getTarget().getId() == States.DONE) {
-                    logger.info("用户已收货，订单完成");
+                    logger.info("用户已收货,订单完成");
                     return;
                 }
             }

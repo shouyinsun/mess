@@ -20,7 +20,7 @@ public class LoginResponseHandler extends SimpleChannelInboundHandler<LoginRespo
             System.out.println("userId:"+msg.getUserId());
             LoginUtil.markAsLogin(ctx.channel());
         } else {
-            System.out.println(new Date() + ": 客户端登录失败，原因：" + msg.getReason());
+            System.out.println(new Date() + ": 客户端登录失败,原因：" + msg.getReason());
         }
     }
 

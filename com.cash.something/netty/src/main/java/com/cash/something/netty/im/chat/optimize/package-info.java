@@ -11,7 +11,7 @@ package com.cash.something.netty.im.chat.optimize;
  * 因为 NIO 线程是会有很多 channel 共享的,不能阻塞。
  *
  *
- 对于统计耗时的场景,如果在自定义业务线程中调用类似 writeAndFlush() 的异步操作，
+ 对于统计耗时的场景,如果在自定义业务线程中调用类似 writeAndFlush() 的异步操作,
  需要通过添加监听器的方式来统计
 
 
