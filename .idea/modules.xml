@@ -4,7 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/mess.iml" filepath="$PROJECT_DIR$/.idea/mess.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.cash.something/netty/netty.iml" filepath="$PROJECT_DIR$/com.cash.something/netty/netty.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.cash.something/sharding-jdbc/sharding-jdbc.iml" filepath="$PROJECT_DIR$/com.cash.something/sharding-jdbc/sharding-jdbc.iml" />
     </modules>
   </component>
 </project>
